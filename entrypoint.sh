@@ -3,7 +3,9 @@
 echo ">>> Hello from inside the container"
 echo ">>> Let's build"
 
-cd /github/workspace
+pwd
+
+cd /github/home
 ls -al
 ls -al ..
 make
