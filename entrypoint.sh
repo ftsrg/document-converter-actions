@@ -5,12 +5,10 @@ echo ">>> Let's build"
 
 pwd
 
-cd /github/home
-ls -al
-ls -al ..
-make
+cd /github
+find . -type f
 
-echo ">>> PDFs built"
+#echo ">>> PDFs built"
 
 time=$(date)
 echo ::set-output name=time::$time
