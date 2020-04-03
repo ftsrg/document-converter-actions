@@ -6,5 +6,4 @@ outputs:
     description: 'The time it took to build the PDFs'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
-
+  image: 'docker://ftsrg/remo'
