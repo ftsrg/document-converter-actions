@@ -1,10 +1,10 @@
 # document-converter-actions
 
-GitHub Actions supporting the Systems modelling course
+GitHub Actions for building LaTeX and Markdown documents
 
 ## Usages
 
-Used in our private repositories to build syllabi for the Systems Modelling classes, Critical Systems Architectures laboratories, etc.
+Used in our private repositories to build syllabi for the Systems Modelling course and various laboratory classes.
 
 ## Base image
 
