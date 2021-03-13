@@ -1,4 +1,4 @@
-FROM makisyu/texlive-2019
+FROM makisyu/texlive-2020
 
 RUN dnf install -y the_silver_searcher pandoc
 
