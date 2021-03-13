@@ -1,6 +1,6 @@
 # document-converter-actions
 
-GitHub Actions for building LaTeX and Markdown documents
+GitHub Actions for building LaTeX and Markdown documents using a Makefile.
 
 ## Usages
 
@@ -23,11 +23,12 @@ To deploy the image on Docker Hub, run:
 docker push ftsrg/document-converter
 ```
 
+## Local usage
 
-## Usage
-
-To use this Docker image, create a `Makefile` that performs the required build steps. Then, run the image as follows;
+To use this Docker image, create a `Makefile` that performs the required build steps. Then, test the image as follows;
 
 ```bash
-docker run --rm -v `pwd`:"/github/workspace" ftsrg/document-converter
+docker run --rm -v `pwd`:"/github/workspace" ftsrg/document-converter [arguments]
 ```
+
+The `[arguments]` are optional and are passed to the Makefile.
