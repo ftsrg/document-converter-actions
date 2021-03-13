@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 cd /github/workspace
-make
+make "$@"
 
 time=$(date)
 echo ::set-output name=time::$time
