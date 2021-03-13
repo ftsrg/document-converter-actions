@@ -4,6 +4,7 @@ inputs:
   makefile-arguments:
     description: 'Arguments to be passed to the Makefile'
     required: false
+    default: null
 outputs:
   time:
     description: 'The time it took to build the PDFs'
