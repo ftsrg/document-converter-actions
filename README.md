@@ -32,3 +32,20 @@ docker run --rm -v `pwd`:"/github/workspace" ftsrg/document-converter [arguments
 ```
 
 The `[arguments]` are optional and are passed to the Makefile.
+
+## Usage with GitHub Actions
+
+Create a `.yml` workflow file in your repository under `.github/workflows/`.
+For example, to run `make ci`, use the following configuration:
+
+```yaml
+jobs:
+  job_name:
+    runs-on: ...
+    name: ...
+    steps:
+    - name: Build PDFs with the LaTeX engine in Docker
+      uses: ftsrg/document-converter-actions@master
+      with:
+        makefile-arguments: ci
+```
