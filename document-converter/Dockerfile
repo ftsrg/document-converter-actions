@@ -2,6 +2,7 @@ FROM registry.gitlab.com/islandoftex/images/texlive:TL2020-2021-03-21-04-14@sha2
 
 RUN apt-get update && apt-get install -y \
     silversearcher-ag \
+    pdfgrep \
     pandoc \
  && rm -rf /var/lib/apt/lists/*
 
