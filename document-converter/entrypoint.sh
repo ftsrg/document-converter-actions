@@ -1,4 +1,5 @@
 #!/bin/sh -l
+set -Eeuo pipefail
 
 cd /github/workspace
 make
