@@ -1,4 +1,5 @@
-#!/bin/sh -l
+#!/bin/bash -l
+set -Eeuo pipefail
 
 cd /github/workspace
 
