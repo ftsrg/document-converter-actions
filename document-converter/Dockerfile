@@ -1,6 +1,6 @@
-FROM makisyu/texlive-2020
+FROM texlive/texlive:latest
 
-RUN dnf install -y the_silver_searcher pandoc ncurses-compat-libs
+RUN apt-get update && apt-get install -y silversearcher-ag pandoc
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
