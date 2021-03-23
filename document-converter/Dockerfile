@@ -1,4 +1,4 @@
-FROM texlive/texlive:latest
+FROM registry.gitlab.com/islandoftex/images/texlive:TL2020-2021-03-21-04-14@sha256:f2b367a2548683eaf15a3dcd5eac50e4104e42140b9337d66a9f9950579d4c77
 
 RUN apt-get update && apt-get install -y silversearcher-ag pandoc
 
