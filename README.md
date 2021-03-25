@@ -14,13 +14,15 @@ To build the image, navigate to the `document-converter` directory.
 
 ```bash
 cd document-converter
-docker build -t ftsrg/document-converter .
+docker build -t ftsrg/document-converter:2020 .
+docker tag ftsrg/document-converter:2020 ftsrg/document-converter:latest
 ```
 
 To deploy the image on Docker Hub, run:
 
 ```bash
-docker push ftsrg/document-converter
+docker push ftsrg/document-converter:2020
+docker push ftsrg/document-converter:latest
 ```
 
 ## Local usage
