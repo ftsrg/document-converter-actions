@@ -14,13 +14,15 @@ To build the image, navigate to the `document-converter` directory.
 
 ```bash
 cd document-converter
-docker build -t ftsrg/document-converter:2020 .
+docker build -t ftsrg/document-converter:2020-v20220329 .
+docker tag ftsrg/document-converter:2020-v20220329 ftsrg/document-converter:2020
 docker tag ftsrg/document-converter:2020 ftsrg/document-converter:latest
 ```
 
 To deploy the image on Docker Hub, run:
 
 ```bash
+docker push ftsrg/document-converter:2020-v20220329
 docker push ftsrg/document-converter:2020
 docker push ftsrg/document-converter:latest
 ```
@@ -30,7 +32,7 @@ docker push ftsrg/document-converter:latest
 To use this Docker image, create a `Makefile` that performs the required build steps. Then, test the image as follows;
 
 ```bash
-docker run --rm -v `pwd`:"/github/workspace" ftsrg/document-converter [arguments]
+docker run --rm -v `pwd`:"/github/workspace" ftsrg/document-converter:2020 [arguments]
 ```
 
 The `[arguments]` are optional and are passed to the Makefile.
@@ -47,7 +49,7 @@ jobs:
     name: ...
     steps:
     - name: Build PDFs with the LaTeX engine in Docker
-      uses: ftsrg/document-converter-actions@master
+      uses: ftsrg/document-converter-actions@2020
       with:
         makefile-arguments: ci
 ```

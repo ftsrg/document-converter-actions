@@ -10,6 +10,6 @@ outputs:
     description: 'The time it took to build the PDFs'
 runs:
   using: 'docker'
-  image: 'docker://ftsrg/document-converter:2020'
+  image: 'docker://ftsrg/document-converter:2020-v20220329'
   args:
     - ${{ inputs.makefile-arguments }}
