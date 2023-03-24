@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/islandoftex/images/texlive:TL2020-2021-04-04-04-11@sha256:824430519e6708dcedea8c94b7c3d11f20a4acfbfd30ca7ec1c0317c33c880d4
+FROM registry.gitlab.com/islandoftex/images/texlive:TL2022-2023-03-19-full@sha256:9d1f16e3c919e67267bb5a9796bee6f51c8265927f0bf99952241981a60c1d8d
 
 RUN apt-get update && apt-get install -y \
     silversearcher-ag \
