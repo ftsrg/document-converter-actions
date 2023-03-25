@@ -11,5 +11,8 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/ftsrg/document-converter:2022-v20230319'
+  credentials:
+     username: ${{ github.actor }}
+     password: ${{ secrets.github_token }}
   args:
     - ${{ inputs.makefile-arguments }}
